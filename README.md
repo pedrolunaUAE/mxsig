@@ -1,93 +1,163 @@
-# mxsig
+<img src=https://gaia.inegi.org.mx/MxSIG/mxsig.png alt="drawing" width="400"/> <img src=https://gaia.inegi.org.mx/MxSIG/docker2.png alt="drawing" width="100" align="right"/> 
+
+# Tabla de contenidos 
+-------------------------
+
+-  [¿Que es MxSIG?](#que-es-mxsig)
+-  [Requerimientos](#requerimientos)
+-  [Instalación](#instalación)
+-  [Consideraciones](#consideraciones)
+-  [Modulos de software libre que utiliza](#modulos-de-software-libre-que-utiliza)
+-  [Servicios estandarizados que provee](#servicios-estandarizados-que-provee)
+-  [Funcionalidades](#funcionalidades)
+-  [Ventajas](#ventajas)
+-  [Licencias](#licencias)
+
+![](https://gaia.inegi.org.mx/MxSIG/mxsig_solo.png)¿Que es MxSIG?
+----------------
+
+Plataforma de código abierto para la web desarrollada para implementar soluciones geomáticas que facilitan el uso, integración, interpretación, publicación y análisis de la información geográfica y estadística.
+Está desarrollada utilizando módulos robustos de software de código libre.
+
+Requerimientos 
+--------------
+Usando como base una tecnología que segrega los procesos (Docker), MxSIG se puede configurar de diferentes formas, y plataformas, de modo que pueden ejecutarse de manera independiente a través de contenedores que ofrecen modelos de implementación basado en Imágenes.
+
+Se requiere instalar, cumplir las siguientes requerimientos será suficiente.
+
+|   **Hardware**       |  **Recomendado**  [^1] |
+| :------------- | :---------- |
+| Memoria RAM    | 4 GB        |
+| Memoria SWAP   | 2 GB        |
+| Disco duro     | 30 GB       |
+| Procesador     | Quad core   |
+
+[^1]: Estos son requerimientos básicos para la instalación de MxSIG, si en lo particular el usuario requiere más recursos son a su propia consideración.
 
 
+Instalación 
+-----------
 
-## Getting started
+MxSIG se puede configurar de diferentes formas y en diferentes plataformas.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+1.- La primera opción es ejecutar el script  **mxsig-started.sh** el cual ya tiene las rutas de instalación preestablecidas.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+> Nota.- Si se va a utilizar esta forma de instalación es importante mencionar que el script usa una utilería llamada _unzip_ que en la mayoría de distribuciones Linux suele estar preinstalada, en caso contrario basta con instalarlo usando el gestor de paquetes correspondiente a tu distribución. 
+Para Windows se puede instalar la versión de línea de comandos de unzip o usar una herramienta gráfica que soporte archivos **ZIP**, como **WinRAR**, **7-Zip**, o **PeaZip**
 
-## Add your files
+2.- La segunda opción permite modificar las rutas y establecer el lugar donde se instalaran los paquetes del proyecto mediante el uso de variables de ambiente [.env](#variables-de-ambiente) también personalizar el volumen donde se crearán y con el comando **docker compose up -d --build**
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+[Descargar docker](https://docs.docker.com/engine/install/)
 
+**Variables de ambiente**
+-----------
+
+MxSIG necesita la configuración de variables de ambiente para que este funcione correctamente en un archivo **.env**, y dependiendo de su sistema y ambiente es la configuración de cada una a continuación se hace referencia a cada una y un ejemplo.-
+
+|   **Variable**       |  **Descripcion** |
+| :------------- | :---------- |
+| DIR_MXSIG_DATA    | Ubicación de cliente de MxSIG para contenedor de apache, cliente ubicado en la url de git [mdm-client](https://git.inegi.org.mx/mxsig/mxsig_client)   |
+| DIR_MXSIG_INDICES_SOLR   | Ruta de archivos de configuración para contenedor de tomcat del war de mdmSearchEngine        |
+| DIR_MXSIG_DATA_MAP_LOGS  | Ruta donde se guardaran los logs relacionados con el contenedor de mapserver  |
+| DIR_MXSIG_DATA_MAPS  |  Ruta de maps para el contenedor de mapserver |
+
+Ejemplo archivo **.env**
+
+_Windows_
 ```
-cd existing_repo
-git remote add origin https://git.inegi.org.mx/mxsig/mxsig.git
-git branch -M master
-git push -uf origin master
+DIR_MXSIG_DATA=C:\mxsig_data\mxsig-client
+DIR_MXSIG_DATA_MAP_LOGS=C:\mxsig_data\logs\maps
+DIR_MXSIG_DATA_MAPS=C:\mxsig_data\mxsig-servicios\mapserver\map
+DIR_MXSIG_INDICES_SOLR=C:\mxsig_data\mxsig-servicios\tomcat\solr-config
+```
+_Linux_
+```
+DIR_MXSIG_DATA=/usr/local/mxsig_data/mxsig-client
+DIR_MXSIG_DATA_MAP_LOGS=/usr/local/mxsig_data/logs/maps
+DIR_MXSIG_DATA_MAPS=/usr/local/mxsig_data/mxsig-servicios/mapserver/map
+DIR_MXSIG_INDICES_SOLR=/usr/local/mxsig_data/mxsig-servicios/tomcat/solr-config
 ```
 
-## Integrate with your tools
+Consideraciones 
+-----------
+**Importante**
 
-- [ ] [Set up project integrations](http://10.153.10.88/mxsig/mxsig/-/settings/integrations)
+Si se vienen de versiones anteriores de MxSIG para poder usar esta nueva versión se debe de tener en consideración lo siguiente.-
 
-## Collaborate with your team
+- Al querer usar información de versiones anteriores de MxSIG, no será posible un cambio transparente, por las versiones diferentes de volumenes y contenedores de **MxSIG-DB** por lo que si se quiere traer información es necesario realizar un back-up de la base de datos y restaurarla en el nuevo volumen del contenedor
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- De igual forma es necesario para el **mdm-client** sustituirlo ya sea en la carpeta clientes o en la correspondiente elegida por el usuario ajustada en el archivo .env
 
-## Test and Deploy
+- Al igual que el mdm-cliente, se debe realizar lo propio con los mapas ya sea en la carpeta mapserver o la elegida en el archivo .env
 
-Use the built-in continuous integration in GitLab.
+- Subir el archivo **mdmservices.war** con los cambios necesarios ya sea por medio del cliente de tomcat o con la creación de un archivo Dockerfile para construir el nuevo contenedor de tomcat
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Modulos de software libre que utiliza
+-------------------------------------
+Librerías de soporte MxSIG
 
-***
+- PostgreSQL
+- PostGIS
+- MapServer
+- OpenLayers
+- jQuery
 
-# Editing this README
+Lenguaje de desarrollo
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- HTML5 (JavaScript y CSS)
+- Java
 
-## Suggestions for a good README
+Servicios estandarizados que provee 
+-----------------
+- Web Map Service (WMS)
+- Web Map Tile Service (WMTS)
+- Representational State Transfer (REST)
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Funcionalidades 
+---------------
+- Buscador
+- Medir área
+- Medir distancia
+- Digitalizar
+- Análisis
+- Importar/Exportar kml
+- Cruces de información
+- Leyenda
+- Identificar
+- Área de control de escala y desplazamiento
+- Acercar
+- Alejar
+- Mapa completo
+- Mapa de referencia
+- Acceso y control de las capas de información
+- Capas de información
+- Acceso a capas activas
+- Línea de tiempo
+- Mapa base
+- Descarga de vista
+- Imprimir
 
-## Name
-Choose a self-explaining name for your project.
+Ventajas 
+--------
+- Software de código abierto
+- Obtención de domicilio geográfico
+- Facilidad para el desarrollo de visualizadores de información estadística y geográfica
+- Accesibilidad
+- Experiencia
+- Escalabilidad
+- Interoperabilidad
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Licencias 
+---------
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+MxSIG Derechos Reservados INEGI
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+MxSIG es un software gratuito, el Usuarios es libre de distribuirlo o / y modificarlo según los términos de “GNU Lesser
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+General Public License”, licencia publicada por “Free Software Foundation.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+MxSIG es distribuido con el interés de fomentar el uso y aprovechamiento de la información geográfica y estadística,
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+pero SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+PROPÓSITO PARTICULAR. Vea la Licencia “GNU Lesser General Public License” para más detalles.

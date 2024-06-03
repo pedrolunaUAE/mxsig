@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Directorio donde se encuentra este script
+current_dir=$(dirname "$(realpath "$0")")
+
+variable1="$current_dir/tomcat"
+variable2="$current_dir/mapserver"
+# Crear las carpetas dentro del directorio actual
+echo "Creación de carpetas de tomcat y mapserver"
+
+mkdir -p "$current_dir/tomcat"
+mkdir -p "$current_dir/mapserver"
+mkdir -p "$current_dir/mapserver/logs"
+mkdir -p "$current_dir/clientes"
+
+echo "Se han creado las carpetas y descargado los archivos en: $current_dir"
+
+echo "Descarga de recursos para mxsig"
+# Descargar archivos de mxsig
+echo "Archivos para mapserver"
+if [ ! -d "$current_dir/tomcat/solr-config" ]; then
+    curl -k -L -o "$current_dir/mapserver/map.zip" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/mapserver/map.zip"
+    unzip -d "$current_dir/mapserver/" "$current_dir/mapserver/map.zip"
+    rm "$current_dir/mapserver/map.zip"
+else
+    echo "La carpeta de map ya existe"
+fi
+
+echo "Archivos para tomcat"
+if [ ! -d "$current_dir/tomcat/solr-config" ]; then
+    curl -k -L -o "$current_dir/tomcat/solr-config.zip" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/tomcat/solr-config.zip"
+    unzip -d "$current_dir/tomcat/" "$current_dir/tomcat/solr-config.zip"
+    rm "$current_dir/tomcat/solr-config.zip"
+else
+    echo "La carpeta de configuración solr-config ya existe"
+fi
+
+# Descargar proyecto de GitLab
+echo "Clonar proyecto de Gitlab"
+if [ ! -d "$current_dir/clientes/mdm-client" ]; then
+    git clone "https://git.inegi.org.mx/mxsig/mxsig_client.git" "$current_dir/clientes/mdm-client"
+else
+    echo "El proyecto de GitLab ya ha sido clonado previamente."
+fi
+
+# Creación de archivo .env
+echo "Creación de archivo .env"
+env_file="$current_dir/.env"
+echo "DIR_MXSIG_INDICES_SOLR=./tomcat/solr-config" > "$env_file"
+echo "DIR_MXSIG_DATA_MAPS=./mapserver/map" >> "$env_file"
+echo "DIR_MXSIG_DATA_MAP_LOGS=./mapserver/logs" >> "$env_file"
+echo "DIR_MXSIG_DATA=./clientes" >> "$env_file"
+
+echo "Ejecutar proyecto de MxSIG"
+docker-compose up -d --build

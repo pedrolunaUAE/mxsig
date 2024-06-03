@@ -1,0 +1,100 @@
+version: '3.9'
+
+services:
+### Fronted
+  ### Apache
+    mxsig-ui:
+      image: mxsig/mxsig-apache
+      ports:
+        - "81:80"
+      restart: unless-stopped
+      networks:
+        - frontend
+      depends_on:
+        - tomcat
+        - haproxy
+      links:
+        - tomcat
+      container_name: 'mxsig-ui'
+      volumes:
+        - type: bind
+          source: ${DIR_MXSIG_DATA}
+          target: /usr/local/apache2/htdocs/
+      user: "www-data:www-data"
+
+
+### Backend
+### MxSIG Servicios
+  ### HAproxy
+    haproxy:
+      image: mxsig/mxsig-haproxy
+      networks:
+        - backend
+        - frontend
+      ports:
+        - "82:80"
+        - "70:70"
+      restart: always
+      container_name: 'mxsig-haproxy'
+  ### Tomcat
+    tomcat:
+      image: mxsig/mxsig-tomcat
+      ports:
+        - 8084:8080
+      networks:
+        - backend
+      volumes:
+        - type: bind
+          source: ${DIR_MXSIG_INDICES_SOLR}
+          target: /cache/mdmindices
+      user: "tomcat:tomcat"
+      container_name: 'mxsig-tomcat'
+      depends_on:
+      - haproxy
+  ### MapServer
+    mapserver:
+      image: mxsig/mxsig-mapserver7
+      networks:
+        - backend
+      ports:
+        - "8081:80"
+      restart: unless-stopped
+      container_name: 'mxsig-mapserver'
+      depends_on:
+        - haproxy
+      volumes:
+        - type: bind
+          source: ${DIR_MXSIG_DATA_MAP_LOGS}
+          target: /logs/mapserver
+        - type: bind
+          source: ${DIR_MXSIG_DATA_MAPS}
+          target: /opt/map
+      user: "www-data:www-data"
+
+  ### postgres postgis
+    mxsig-db:
+      image: mxsig/mxsig-db
+      environment:
+        - POSTGRES_DB=postgres
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=P0stgr3s
+        - POSTGIS_ENABLE_OUTDB_RASTERS=1
+        - POSTGIS_GDAL_ENABLED_DRIVERS=ENABLE_ALL
+        - POSTGIS_GDAL_ENABLED_DRIVERS="GTiff PNG JPEG GIF XYZ"
+      volumes:
+        -  data:/var/lib/postgresql/data
+      restart: always
+      ports:
+        - 5432:5432
+      networks:
+        - backend
+      container_name: 'mxsig-db'
+
+volumes:
+    data:
+    
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
