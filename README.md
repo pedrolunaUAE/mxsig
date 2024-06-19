@@ -52,9 +52,10 @@ Para Windows se puede instalar la versión de línea de comandos de unzip o usar
 **Variables de ambiente**
 -----------
 
-MxSIG necesita la configuración de variables de ambiente para que este funcione correctamente en un archivo **.env**, y dependiendo de su sistema y ambiente es la configuración de cada una a continuación se hace referencia a cada una y un ejemplo.-
+MxSIG necesita la configuración de variables de ambiente para que este funcione correctamente en un archivo **.env**, y dependiendo de su sistema y ambiente es la configuración de cada una. A continuación, se muestra un ejemplo y la referencia a ellas.
 
-|   **Variable**       |  **Descripcion** |
+
+|   **Variable**       |  **Descripción** |
 | :------------- | :---------- |
 | DIR_MXSIG_DATA    | Ubicación de cliente de MxSIG para contenedor de apache, cliente ubicado en la url de git [mdm-client](https://git.inegi.org.mx/mxsig/mxsig_client)   |
 | DIR_MXSIG_INDICES_SOLR   | Ruta de archivos de configuración para contenedor de tomcat del war de mdmSearchEngine        |
@@ -81,14 +82,15 @@ DIR_MXSIG_INDICES_SOLR=/usr/local/mxsig_data/mxsig-servicios/tomcat/solr-config
 Acceder al cliente de MxSIG 
 -----------
 
-Una vez que el proceso ha finalizado de manera correcta para poder acceder al cliente de **MxSIG** esto es posible por medio de un navegador web entrando por la ip o dominio del servidor o de manera local
+Una vez que el proceso ha finalizado de manera correcta para poder acceder al cliente de **MxSIG** esto es posible por medio de un navegador web entrando por la ip, dominio del servidor o de manera local.
 
 - http://localhost/mdm-client
-- http://<server-ip>/mdm-client
+
+- http://**ip-del-servidor**/mdm-client
 
 **Puertos del MxSIG**
 
-|   **Contenedor**       |  **Puerto** |
+|   **Contenedor**  |  **Puerto** |
 | :------------- | :---------- |
 | mxsig/mxsig-apache | 81 |
 | mxsig/mxsig-haproxy | 80 |
@@ -96,8 +98,9 @@ Una vez que el proceso ha finalizado de manera correcta para poder acceder al cl
 | mxsig/mxsig-mapserver7 | 8081 |
 | mxsig/mxsig-db | 5432 |
 
-> Nota.- De ser necesario cambiar como se exponen los puertos, esta modificacón debe ser el archivo **docker-compose.yml** y en este solo en donde se expone el contenedor por ejemplo.- 
-contenedor de tomcat
+> Nota.- Si es necesario cambiar la forma en que se exponen los puertos, esta modificación debe ser en el archivo **docker-compose.yml**, solamente en donde se expone el contenedor. Ejemplo.- 
+
+**contenedor de tomcat**
 - ports:
     - "**8084**:80"
 
@@ -105,7 +108,7 @@ Consideraciones
 -----------
 **Importante**
 
-Si se vienen de versiones anteriores de MxSIG para poder usar esta nueva versión se debe de tener en consideración lo siguiente.-
+Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva versión se debe de tener en consideración lo siguiente.-
 
 - Al querer usar información de versiones anteriores de MxSIG, no será posible un cambio transparente, por las versiones diferentes de volumenes y contenedores de **MxSIG-DB** por lo que si se quiere traer información es necesario realizar un back-up de la base de datos y restaurarla en el nuevo volumen del contenedor
 
@@ -175,12 +178,5 @@ Licencias
 
 MxSIG Derechos Reservados INEGI
 
-MxSIG es un software gratuito, el Usuarios es libre de distribuirlo o / y modificarlo según los términos de “GNU Lesser
-
-General Public License”, licencia publicada por “Free Software Foundation.
-
-MxSIG es distribuido con el interés de fomentar el uso y aprovechamiento de la información geográfica y estadística,
-
-pero SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN
-
-PROPÓSITO PARTICULAR. Vea la Licencia “GNU Lesser General Public License” para más detalles.
+MxSIG es un software gratuito, el Usuario es libre de distribuirlo o/y modificarlo según los términos de “GNU Lesser General Public License”, licencia publicada por “Free Software Foundation.
+MxSIG es distribuido con el interés de fomentar el uso y aprovechamiento de la información geográfica y estadística, pero SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la Licencia “GNU Lesser General Public License” para más detalles.
