@@ -78,6 +78,29 @@ DIR_MXSIG_DATA_MAPS=/usr/local/mxsig_data/mxsig-servicios/mapserver/map
 DIR_MXSIG_INDICES_SOLR=/usr/local/mxsig_data/mxsig-servicios/tomcat/solr-config
 ```
 
+Acceder al cliente de MxSIG 
+-----------
+
+Una vez que el proceso ha finalizado de manera correcta para poder acceder al cliente de **MxSIG** esto es posible por medio de un navegador web entrando por la ip o dominio del servidor o de manera local
+
+- http://localhost/mdm-client
+- http://<server-ip>/mdm-client
+
+**Puertos del MxSIG**
+
+|   **Contenedor**       |  **Puerto** |
+| :------------- | :---------- |
+| mxsig/mxsig-apache | 81 |
+| mxsig/mxsig-haproxy | 80 |
+| mxsig/mxsig-tomcat | 8080 |
+| mxsig/mxsig-mapserver7 | 8081 |
+| mxsig/mxsig-db | 5432 |
+
+> Nota.- De ser necesario cambiar como se exponen los puertos, esta modificacón debe ser el archivo **docker-compose.yml** y en este solo en donde se expone el contenedor por ejemplo.- 
+contenedor de tomcat
+- ports:
+    - "**8084**:80"
+
 Consideraciones 
 -----------
 **Importante**

@@ -32,7 +32,7 @@ services:
         - backend
         - frontend
       ports:
-        - "82:80"
+        - "80:80"
         - "70:70"
       restart: always
       container_name: 'mxsig-haproxy'
@@ -40,7 +40,7 @@ services:
     tomcat:
       image: mxsig/mxsig-tomcat
       ports:
-        - 8084:8080
+        - 8080:8080
       networks:
         - backend
       volumes:
