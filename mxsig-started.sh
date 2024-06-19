@@ -51,5 +51,12 @@ echo "DIR_MXSIG_DATA_MAPS=./mapserver/map" >> "$env_file"
 echo "DIR_MXSIG_DATA_MAP_LOGS=./mapserver/logs" >> "$env_file"
 echo "DIR_MXSIG_DATA=./clientes" >> "$env_file"
 
+echo "Pull de imagenes de docker"
+docker pull mxsig/mxsig-apache
+docker pull mxsig/mxsig-haproxy
+docker pull mxsig/mxsig-tomcat
+docker pull mxsig/mxsig-mapserver7
+docker pull mxsig/mxsig-db
+
 echo "Ejecutar proyecto de MxSIG"
 docker-compose up -d --build
