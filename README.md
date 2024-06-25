@@ -82,7 +82,7 @@ DIR_MXSIG_INDICES_SOLR=/usr/local/mxsig_data/mxsig-servicios/tomcat/solr-config
 Acceder al cliente de MxSIG 
 -----------
 
-Una vez que el proceso ha finalizado de manera correcta para poder acceder al cliente de **MxSIG** esto es posible por medio de un navegador web entrando por la ip, dominio del servidor o de manera local.
+Una vez que el proceso ha finalizado de manera correcta, es posible acceder al cliente de **MxSIG** por medio de un navegador web; colocando la ip, dominio del servidor o de manera local.
 
 - http://localhost/mdm-client
 
@@ -98,7 +98,7 @@ Una vez que el proceso ha finalizado de manera correcta para poder acceder al cl
 | mxsig/mxsig-mapserver7 | 8081 |
 | mxsig/mxsig-db | 5432 |
 
-> Nota.- Si es necesario cambiar la forma en que se exponen los puertos, esta modificación debe ser en el archivo **docker-compose.yml**, solamente en donde se expone el contenedor. Ejemplo.- 
+> Nota.- Si es necesario cambiar la forma en que se exponen los puertos, deberá modificar el archivo **docker-compose.yml**, solamente en donde se expone el contenedor. Ejemplo.
 
 **contenedor de tomcat**
 - ports:
@@ -108,15 +108,15 @@ Consideraciones
 -----------
 **Importante**
 
-Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva versión se debe de tener en consideración lo siguiente.-
+Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva versión se debe de tener en consideración lo siguiente.
 
-- Al querer usar información de versiones anteriores de MxSIG, no será posible un cambio transparente, por las versiones diferentes de volumenes y contenedores de **MxSIG-DB** por lo que si se quiere traer información es necesario realizar un back-up de la base de datos y restaurarla en el nuevo volumen del contenedor
+- Al querer usar información de versiones anteriores de MxSIG, no será posible un cambio transparente, por las diferencias en las versiones de volumenes y contenedores de **MxSIG-DB**. Por tanto, si se quiere traer información, es necesario realizar un back-up de la base de datos y restaurarla en el nuevo volumen del contenedor.
 
-- De igual forma es necesario para el **mdm-client** sustituirlo ya sea en la carpeta clientes o en la correspondiente elegida por el usuario ajustada en el archivo .env
+- De igual forma, es necesario sustituir el mdm-client; sea en lacarpeta clientes o en la elegida por el usuario, ajustada en el archivo .env.
 
-- Al igual que el mdm-cliente, se debe realizar lo propio con los mapas ya sea en la carpeta mapserver o la elegida en el archivo .env
+- Del mismo modo que el mdm-cliente, se debe realizar lo propio con los mapas, indiferentemente que sea en la carpeta mapserver o en el archivo .env.
 
-- Subir el archivo **mdmservices.war** con los cambios necesarios ya sea por medio del cliente de tomcat o con la creación de un archivo Dockerfile para construir el nuevo contenedor de tomcat
+- Subir el archivo **mdmservices.war** con los cambios necesarios; por medio del cliente  tomcat o con la creación de un archivo Dockerfile, para construir el nuevo contenedor de tomcat
 
 Modulos de software libre que utiliza
 -------------------------------------
