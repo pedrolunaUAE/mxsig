@@ -35,6 +35,13 @@ else
     echo "La carpeta de configuración solr-config ya existe"
 fi
 
+echo "Descargar mdmservices.war"
+if [ ! -f "$current_dir/tomcat/mdmservices.war" ]; then
+    curl -k -L -o "$current_dir/tomcat/mdmservices.war" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/tomcat/mdmservices.war"
+else
+    echo "El archivo de mdmservices.war ya existe"
+fi
+
 # Descargar proyecto de GitLab
 echo "Clonar proyecto de Gitlab"
 if [ ! -d "$current_dir/clientes/mdm-client" ]; then
