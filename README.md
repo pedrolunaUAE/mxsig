@@ -32,7 +32,7 @@ Se requiere instalar, cumplir las siguientes requerimientos será suficiente.
 | Disco duro     | 30 GB       |
 | Procesador     | Quad core   |
 
-[^1]: Estos son requerimientos básicos para la instalación de MxSIG, si en lo particular el usuario requiere más recursos son a su propia consideración.
+_Estos son requerimientos básicos para la instalación de MxSIG, si en lo particular el usuario requiere más recursos son a su propia consideración._
 
 
 Instalación 
