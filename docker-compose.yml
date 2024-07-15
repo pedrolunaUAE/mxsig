@@ -57,7 +57,7 @@ services:
       networks:
         - backend
       ports:
-        - "8081:80"
+        - "9000:9000"
       restart: unless-stopped
       container_name: 'mxsig-mapserver'
       depends_on:
