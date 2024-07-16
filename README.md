@@ -95,7 +95,7 @@ Una vez que el proceso ha finalizado de manera correcta, es posible acceder al c
 | mxsig/mxsig-apache | 81 |
 | mxsig/mxsig-haproxy | 80 |
 | mxsig/mxsig-tomcat | 8080 |
-| mxsig/mxsig-mapserver7 | 8081 |
+| mxsig/mxsig-mapserver7 | 9000 |
 | mxsig/mxsig-db | 5432 |
 
 > Nota.- Si es necesario cambiar la forma en que se exponen los puertos, deberá modificar el archivo **docker-compose.yml**, solamente en donde se expone el contenedor. Ejemplo.
