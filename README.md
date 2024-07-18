@@ -118,6 +118,16 @@ Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva
 
 - Subir el archivo **mdmservices.war** con los cambios necesarios; por medio del cliente  tomcat o con la creación de un archivo Dockerfile, para construir el nuevo contenedor de tomcat
 
+## Contenedores de MxSIG  
+-------------------------
+
+Para mas información sobre la personalización de contenedores sobre cada uno de ellos visitar docker hub.
+- [mxsig-tomcat](https://hub.docker.com/r/mxsig/mxsig-tomcat)
+- [mxsig-haproxy](https://hub.docker.com/r/mxsig/mxsig-haproxy)
+- [mxsig-db](https://hub.docker.com/r/mxsig/mxsig-db)
+- [mxsig-mapserver7](https://hub.docker.com/r/mxsig/mxsig-mapserver7)
+- [mxsig-apache](https://hub.docker.com/r/mxsig/mxsig-apache)
+
 Modulos de software libre que utiliza
 -------------------------------------
 Librerías de soporte MxSIG
