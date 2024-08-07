@@ -45,6 +45,8 @@ MxSIG se puede configurar de diferentes formas y en diferentes plataformas.
 > Nota.- Si se va a utilizar esta forma de instalación es importante mencionar que el script usa una utilería llamada _unzip_ que en la mayoría de distribuciones Linux suele estar preinstalada, en caso contrario basta con instalarlo usando el gestor de paquetes correspondiente a tu distribución. 
 Para Windows se puede instalar la versión de línea de comandos de unzip o usar una herramienta gráfica que soporte archivos **ZIP**, como **WinRAR**, **7-Zip**, o **PeaZip**
 
+Este archivo en sistemas _Linux_ o _Mac_, debe de tener permisos de ejecución.- **chmod +x mxsig-started.sh**
+
 2.- La segunda opción permite modificar las rutas y establecer el lugar donde se instalaran los paquetes del proyecto mediante el uso de variables de ambiente [.env](#variables-de-ambiente) también personalizar el volumen donde se crearán y con el comando **docker compose up -d --build**
 
 [Descargar docker](https://docs.docker.com/engine/install/)
