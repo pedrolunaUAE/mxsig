@@ -120,6 +120,8 @@ Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva
 
 - Subir el archivo **mdmservices.war** con los cambios necesarios; por medio del cliente  tomcat o con la creación de un archivo Dockerfile, para construir el nuevo contenedor de tomcat
 
+- A menos que tenga la intención de eliminar la base de datos y comenzar de nuevo cuando ejecute su proyecto de **MxSIG**, tenga cuidado al ejecutar comandos como **docker system prune** o **docker volume prune**; Independientemente de si utiliza un parámetro externo los volúmenes de su base de datos no persistirán más allá del inicio
+
 ## Contenedores de MxSIG  
 -------------------------
 
