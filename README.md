@@ -40,7 +40,7 @@ Instalación
 
 MxSIG se puede configurar de diferentes formas y en diferentes plataformas.
 
-1.- La primera opción es ejecutar el script  **mxsig-started.sh** el cual ya tiene las rutas de instalación preestablecidas.
+1.- La primera opción es ejecutar el script  **mxsig-started.sh** o en Windows ejecutar el archivo **mxsig-started.bat** los cuales ya tiene las rutas de instalación preestablecidas.
 
 > Nota.- Si se va a utilizar esta forma de instalación es importante mencionar que el script usa una utilería llamada _unzip_ que en la mayoría de distribuciones Linux suele estar preinstalada, en caso contrario basta con instalarlo usando el gestor de paquetes correspondiente a tu distribución. 
 Para Windows se puede instalar la versión de línea de comandos de unzip o usar una herramienta gráfica que soporte archivos **ZIP**, como **WinRAR**, **7-Zip**, o **PeaZip**
