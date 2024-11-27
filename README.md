@@ -25,7 +25,7 @@ Usando como base una tecnología que segrega los procesos (Docker), MxSIG se pue
 
 Se requiere instalar, cumplir las siguientes requerimientos será suficiente.
 
-|   **Hardware**       |  **Recomendado**  [^1] |
+|   **Hardware**       |  **Recomendado**   |
 | :------------- | :---------- |
 | Memoria RAM    | 4 GB        |
 | Memoria SWAP   | 2 GB        |
