@@ -12,10 +12,12 @@ mkdir -p "$current_dir/tomcat"
 mkdir -p "$current_dir/mapserver"
 mkdir -p "$current_dir/mapserver/logs"
 mkdir -p "$current_dir/clientes"
+mkdir -p "$current_dir/db"
 
-echo "Se han creado las carpetas y descargado los archivos en: $current_dir"
+echo "Se van a crear las carpetas y descargar los archivos en: $current_dir"
 
 echo "Descarga de recursos para mxsig"
+
 # Descargar archivos de mxsig
 echo "Archivos para mapserver"
 if [ ! -d "$current_dir/tomcat/solr-config" ]; then
@@ -40,6 +42,15 @@ if [ ! -f "$current_dir/tomcat/mdmservices.war" ]; then
     curl -k -L -o "$current_dir/tomcat/mdmservices.war" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/tomcat/mdmservices.war"
 else
     echo "El archivo de mdmservices.war ya existe"
+fi
+
+echo "Archivos shapes"
+if [ ! -f "$current_dir/db/shapes.zip" ]; then
+    curl -k -L -o "$current_dir/db/shapes.zip" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/shapes/shapes.zip"
+    unzip -d "$current_dir/db/" "$current_dir/db/shapes.zip"
+    rm "$current_dir/db/shapes.zip"
+else
+    echo "Los archivos shapes ya existen"
 fi
 
 # Descargar proyecto de GitLab
