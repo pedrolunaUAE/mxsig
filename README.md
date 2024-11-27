@@ -114,7 +114,7 @@ Si se viene de una versión anterior de MxSIG, para poder implementar esta nueva
 
 - Al querer usar información de versiones anteriores de MxSIG, no será posible un cambio transparente, por las diferencias en las versiones de volumenes y contenedores de **MxSIG-DB**. Por tanto, si se quiere traer información, es necesario realizar un back-up de la base de datos y restaurarla en el nuevo volumen del contenedor.
 
-- De igual forma, es necesario sustituir el mdm-client; sea en lacarpeta clientes o en la elegida por el usuario, ajustada en el archivo .env.
+- De igual forma, es necesario sustituir el mdm-client; sea en la carpeta clientes o en la elegida por el usuario, ajustada en el archivo .env.
 
 - Del mismo modo que el mdm-cliente, se debe realizar lo propio con los mapas, indiferentemente que sea en la carpeta mapserver o en el archivo .env.
 
