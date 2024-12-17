@@ -47,6 +47,7 @@ services:
         - type: bind
           source: ${DIR_MXSIG_INDICES_SOLR}
           target: /cache/mdmindices
+        - tomcat:/usr/local/tomcat/webapps
       user: "tomcat:tomcat"
       container_name: 'mxsig-tomcat'
       depends_on:
@@ -92,6 +93,7 @@ services:
 
 volumes:
     data:
+    tomcat:
     
 networks:
   frontend:
