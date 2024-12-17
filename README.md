@@ -47,7 +47,13 @@ Para Windows se puede instalar la versión de línea de comandos de unzip o usar
 
 Este archivo en sistemas _Linux_ o _Mac_, debe de tener permisos de ejecución.- **chmod +x mxsig-started.sh**
 
-2.- La segunda opción permite modificar las rutas y establecer el lugar donde se instalaran los paquetes del proyecto mediante el uso de variables de ambiente [.env](#variables-de-ambiente) también personalizar el volumen donde se crearán y con el comando **docker compose up -d --build**
+2.- La segunda opción permite modificar las rutas y establecer el lugar donde se instalaran los paquetes del proyecto mediante el uso de variables de ambiente [.env](#variables-de-ambiente) y personalizar el volumen donde se crearán y con el comando **docker compose up -d --build** para esto es necesario realizar la descarga de los recursos de manera manual y colocarlos en la ruta requerida
+
+- [Archivos para mapserver](https://gaia.inegi.org.mx/MxSIG/resources/mxsig/mapserver/map.zip)
+- [Archivos para tomcat (solr-config)](https://gaia.inegi.org.mx/MxSIG/resources/mxsig/tomcat/solr-config.zip)
+- [War de MdmServices](https://gaia.inegi.org.mx/MxSIG/resources/mxsig/tomcat/mdmservices.war) y subir mediante administrador de tomcat
+- [Archivos shapes](https://gaia.inegi.org.mx/MxSIG/resources/mxsig/shapes/shapes.zip)
+
 
 [Descargar docker](https://docs.docker.com/engine/install/)
 
