@@ -53,6 +53,15 @@ if not exist "%variable1%\mdmservices.war" (
     echo El archivo de mdmservices.war ya existe
 )
 
+:: Archivos shapes
+echo Descargar archivos shapes
+if not exist "%current_dir%\db\shapes.zip" (
+    :: Descargar archivo .war con curl
+    curl -k -L -o "%current_dir%\db\shapes.zip" "https://gaia.inegi.org.mx/MxSIG/resources/mxsig/shapes/shapes.zip"
+) else (
+    echo Los archivos shapes ya existen
+)
+
 :: Clonar proyecto de GitLab
 echo Clonar proyecto de Gitlab
 if not exist "%current_dir%clientes\mdm-client" (
