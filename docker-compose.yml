@@ -1,100 +1,109 @@
 version: '3.9'
 
 services:
-### Fronted
-  ### Apache
-    mxsig-ui:
-      image: mxsig/mxsig-apache
-      ports:
-        - "81:80"
-      restart: unless-stopped
-      networks:
-        - frontend
-      depends_on:
-        - tomcat
-        - haproxy
-      links:
-        - tomcat
-      container_name: 'mxsig-ui'
-      volumes:
-        - type: bind
-          source: ${DIR_MXSIG_DATA}
-          target: /usr/local/apache2/htdocs/
-      user: "www-data:www-data"
-
-
-### Backend
-### MxSIG Servicios
-  ### HAproxy
-    haproxy:
-      image: mxsig/mxsig-haproxy
-      networks:
-        - backend
-        - frontend
-      ports:
-        - "80:80"
-        - "70:70"
-      restart: always
-      container_name: 'mxsig-haproxy'
-  ### Tomcat
-    tomcat:
-      image: mxsig/mxsig-tomcat
-      ports:
-        - 8080:8080
-      networks:
-        - backend
-      volumes:
-        - type: bind
-          source: ${DIR_MXSIG_INDICES_SOLR}
-          target: /cache/mdmindices
-        - tomcat:/usr/local/tomcat/webapps
-      user: "tomcat:tomcat"
-      container_name: 'mxsig-tomcat'
-      depends_on:
+  ### Frontend
+  ### Apache + PHP
+  mxsig-ui:
+    build:
+      context: ./php/          # Ruta al directorio del Dockerfile
+      dockerfile: Dockerfile   # Nombre del Dockerfile
+    image: mxsig/mxsig-apache # Nombre de la imagen personalizada
+    ports:
+      - "81:80"                # Puerto expuesto (HTTP)
+    restart: unless-stopped
+    networks:
+      - frontend
+      - backend  
+    depends_on:
+      - tomcat
       - haproxy
+    links:
+      - tomcat
+    container_name: 'mxsig-ui'
+    volumes:
+      - type: bind
+        source: ${DIR_MXSIG_DATA}
+        target: /var/www/html/  # Montar los archivos del frontend aquí
+    user: "www-data:www-data"
+    environment:
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_UPLOAD_MAX_FILESIZE=64M
+      - PHP_POST_MAX_SIZE=64M
+
+  ### Backend
+  ### MxSIG Servicios
+  ### HAproxy
+  haproxy:
+    image: mxsig/mxsig-haproxy
+    networks:
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+      - "70:70"
+    restart: always
+    container_name: 'mxsig-haproxy'
+
+  ### Tomcat
+  tomcat:
+    image: mxsig/mxsig-tomcat
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+    volumes:
+      - type: bind
+        source: ${DIR_MXSIG_INDICES_SOLR}
+        target: /cache/mdmindices
+      - tomcat:/usr/local/tomcat/webapps
+    user: "tomcat:tomcat"
+    container_name: 'mxsig-tomcat'
+    depends_on:
+      - haproxy
+
   ### MapServer
-    mapserver:
-      image: mxsig/mxsig-mapserver7
-      networks:
-        - backend
-      ports:
-        - "9000:9000"
-      restart: unless-stopped
-      container_name: 'mxsig-mapserver'
-      depends_on:
-        - haproxy
-      volumes:
-        - type: bind
-          source: ${DIR_MXSIG_DATA_MAP_LOGS}
-          target: /logs/mapserver
-        - type: bind
-          source: ${DIR_MXSIG_DATA_MAPS}
-          target: /opt/map
-      user: "www-data:www-data"
+  mapserver:
+    image: mxsig/mxsig-mapserver7
+    networks:
+      - backend
+    ports:
+      - "9000:9000"
+    restart: unless-stopped
+    container_name: 'mxsig-mapserver'
+    depends_on:
+      - haproxy
+    volumes:
+      - type: bind
+        source: ${DIR_MXSIG_DATA_MAP_LOGS}
+        target: /logs/mapserver
+      - type: bind
+        source: ${DIR_MXSIG_DATA_MAPS}
+        target: /opt/map
+    user: "www-data:www-data"
 
   ### postgres postgis
-    mxsig-db:
-      image: mxsig/mxsig-db
-      environment:
-        - POSTGRES_DB=postgres
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=P0stgr3s
-        - POSTGIS_ENABLE_OUTDB_RASTERS=1
-        - POSTGIS_GDAL_ENABLED_DRIVERS=ENABLE_ALL
-        - POSTGIS_GDAL_ENABLED_DRIVERS="GTiff PNG JPEG GIF XYZ"
-      volumes:
-        -  data:/var/lib/postgresql/data
-      restart: always
-      ports:
-        - 5432:5432
-      networks:
-        - backend
-      container_name: 'mxsig-db'
+  mxsig-db:
+    image: mxsig/mxsig-db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=P0stgr3s
+      - POSTGIS_ENABLE_OUTDB_RASTERS=1
+      - POSTGIS_GDAL_ENABLED_DRIVERS=ENABLE_ALL
+      - POSTGIS_GDAL_ENABLED_DRIVERS="GTiff PNG JPEG GIF XYZ"
+    volumes:
+      - data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - 5432:5432
+    networks:
+      - backend
+    container_name: 'mxsig-db'
 
 volumes:
-    data:
-    tomcat:
-    
+  data:
+  tomcat:
+
 networks:
   frontend:
     driver: bridge
