@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="215.9mm" height="279.4mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21590 27940"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#2B2A29;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil0 {fill:#393185}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <rect x="-50229.06" y="22420.46" width="13544.96" height="13544.96"/>
+   </clipPath>
+   <clipPath id="id1">
+    <rect x="-10712.26" y="-7007.8" width="13724.25" height="13724.25"/>
+   </clipPath>
+   <clipPath id="id2">
+    <rect x="49377.96" y="-6365.14" width="12958.74" height="12958.74"/>
+   </clipPath>
+   <clipPath id="id3">
+    <rect x="51765.71" y="16484.97" width="13970.01" height="13970.01"/>
+   </clipPath>
+   <clipPath id="id4">
+    <rect x="36947.39" y="20649.05" width="13544.96" height="13544.96"/>
+   </clipPath>
+   <clipPath id="id5">
+    <rect x="-49176.22" y="-6710.39" width="13544.95" height="13544.95"/>
+   </clipPath>
+   <clipPath id="id6">
+    <rect x="30333.48" y="-5783.46" width="14427.43" height="14427.43"/>
+   </clipPath>
+   <clipPath id="id7">
+    <rect x="21169.69" y="22398.46" width="14451.02" height="14451.02"/>
+   </clipPath>
+   <clipPath id="id8">
+    <rect x="1497.87" y="19321.87" width="16636.45" height="16636.45"/>
+   </clipPath>
+   <clipPath id="id9">
+    <rect x="-13729.47" y="21429.75" width="14802.38" height="14802.38"/>
+   </clipPath>
+   <clipPath id="id10">
+    <rect x="1331.85" y="1331.85" width="774.46" height="774.46"/>
+   </clipPath>
+   <clipPath id="id11">
+    <rect x="-31810.21" y="21578.2" width="14451.01" height="14451.01"/>
+   </clipPath>
+   <clipPath id="id12">
+    <rect x="8091.98" y="-6185.34" width="16348.93" height="16348.93"/>
+   </clipPath>
+   <clipPath id="id13">
+    <rect x="-30410.99" y="-6469.02" width="13935.76" height="13935.76"/>
+   </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0 str0" x="-52690.44" y="-11709.03" width="121327.35" height="52832.01"/>
+  <g style="clip-path:url(#id0)">
+   <image id="computadora.png" x="-50229.06" y="22420.46" width="13544.96" height="13544.96" xlink:href="lavadora_Images\lavadora_ImgID1.png"/>
+  </g>
+  <g style="clip-path:url(#id1)">
+   <image id="drenaje.png" x="-10712.26" y="-7007.82" width="13724.27" height="13724.27" xlink:href="lavadora_Images\lavadora_ImgID2.png"/>
+  </g>
+  <g style="clip-path:url(#id2)">
+   <image id="enchufe.png" x="49377.96" y="-6365.14" width="12958.74" height="12958.74" xlink:href="lavadora_Images\lavadora_ImgID3.png"/>
+  </g>
+  <g style="clip-path:url(#id3)">
+   <image id="habitada.png" x="51765.71" y="16484.94" width="13970.04" height="13970.04" xlink:href="lavadora_Images\lavadora_ImgID4.png"/>
+  </g>
+  <g style="clip-path:url(#id4)">
+   <image id="inodoro.png" x="36947.39" y="20649.05" width="13544.96" height="13544.96" xlink:href="lavadora_Images\lavadora_ImgID5.png"/>
+  </g>
+  <g style="clip-path:url(#id5)">
+   <image id="lavadora.png" x="-49176.22" y="-6710.39" width="13544.95" height="13544.95" xlink:href="lavadora_Images\lavadora_ImgID6.png"/>
+  </g>
+  <g style="clip-path:url(#id6)">
+   <image id="llamar.png" x="30333.48" y="-5783.46" width="14427.43" height="14427.43" xlink:href="lavadora_Images\lavadora_ImgID7.png"/>
+  </g>
+  <g style="clip-path:url(#id7)">
+   <image id="microondas.png" x="21169.69" y="22398.46" width="14451.02" height="14451.02" xlink:href="lavadora_Images\lavadora_ImgID8.png"/>
+  </g>
+  <g style="clip-path:url(#id8)">
+   <image id="radio.png" x="1497.87" y="19321.87" width="16636.45" height="16636.45" xlink:href="lavadora_Images\lavadora_ImgID9.png"/>
+  </g>
+  <g style="clip-path:url(#id9)">
+   <image id="refrigerador.png" x="-13729.47" y="21429.75" width="14802.38" height="14802.38" xlink:href="lavadora_Images\lavadora_ImgID10.png"/>
+  </g>
+  <g style="clip-path:url(#id10)">
+   <image id="telefono-movil.png" x="1331.85" y="1331.85" width="774.46" height="774.46" xlink:href="lavadora_Images\lavadora_ImgID11.png"/>
+  </g>
+  <g style="clip-path:url(#id11)">
+   <image id="televisores.png" x="-31810.21" y="21578.2" width="14451.01" height="14451.01" xlink:href="lavadora_Images\lavadora_ImgID12.png"/>
+  </g>
+  <g style="clip-path:url(#id12)">
+   <image id="transmision.png" x="8091.98" y="-6185.34" width="16348.93" height="16348.93" xlink:href="lavadora_Images\lavadora_ImgID13.png"/>
+  </g>
+  <g style="clip-path:url(#id13)">
+   <image id="wifi.png" x="-30410.99" y="-6469.02" width="13935.76" height="13935.76" xlink:href="lavadora_Images\lavadora_ImgID14.png"/>
+  </g>
+ </g>
+</svg>
