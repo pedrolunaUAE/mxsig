@@ -1,0 +1,17 @@
+#st-container{
+  position: absolute;
+  z-index: 100;
+  top: 110px;
+  right: 16px;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+  box-shadow: 0px 0px 3px #000;
+  background-color: #959E9D;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}

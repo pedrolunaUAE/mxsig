@@ -1,0 +1,1247 @@
+/*individual panels forms    ----------------------*/
+/* Features ---------------------------------------- */
+#OpenLayers_Feature_Vector_2509{
+  background-color: #FFF;
+  width: 270px;
+  margin: 5px;
+}
+
+.dinamicPanel-featureItem {
+  float: left;
+  padding: 3px;
+  width: 270px;
+  margin: 5px 0 0 5px;
+  border-radius: 5px;
+  background-color: #FFF;
+  border: 1px solid #959E9D;
+}
+
+.dinamicPanel-featureItem:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-featureItem:last-child {
+  border: 1px solid #959E9D !important;
+  background-color: #FFF;
+  width: 270px;
+  margin: 5px;
+}
+
+.dinamicPanel-featureIcon {
+  float: left;
+}
+
+.feature-rem-button {
+  float: right;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.dinamicPanel-featureBtn {
+  float: right;
+  width: 33px;
+  height: 33px !important;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.dinamicPanel-featureBtn:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-featureText {
+  float: left;
+  width: 180px;
+  margin-left: 2px;
+}
+
+.dinamicPanel-featureName {
+  float: left;
+  width: 100%;
+  font-size: 135%;
+  font-weight: bold;
+}
+
+.dinamicPanel-featureInputName {
+  float: left;
+  width: 198px;
+  height: 16px;
+  padding-left: 2px;
+  font-size: 135%;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-featureEditName,
+.dinamicPanel-featureOkName {
+  float: left;
+  cursor: pointer;
+
+}
+
+.dinamicPanel-editBtns {
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+
+.dinamicPanel-featureOkName {
+  z-index: 50;
+}
+
+.dinamicPanel-featureEditName:hover,
+.dinamicPanel-featureOkName:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-featureInfo {
+  width: 200px;
+  font-size: 110%;
+}
+
+.dinamicPanel-featureTools {
+  float: right;
+  width: 40px;
+}
+
+/*Point panel----------------------------------------*/
+.dinamicPanel-pointItem {
+  height: 33px;
+  padding: 3px;
+  width: 363px;
+  border: 1px solid #FFF;
+  border-bottom: 1px solid #DDD;
+}
+
+.dinamicPanel-pointItem:hover {
+  background-color: #c6eaff;
+}
+
+.dinamicPanel-pointItem:last-child {
+  border: 1px solid #FFF !important;
+}
+
+.dinamicPanel-pointIcon {
+  float: left;
+}
+
+.point-rem-button {
+  float: right;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.dinamicPanel-pointBtn {
+  float: right;
+  width: 33px;
+  height: 33px !important;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.dinamicPanel-pointBtn:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-pointText {
+  float: left;
+  width: 200px;
+  margin-left: 2px;
+}
+
+.dinamicPanel-pointName {
+  float: left;
+  width: 200px;
+  font-size: 135%;
+  font-weight: bold;
+}
+
+.dinamicPanel-pointInputName {
+  float: left;
+  width: 198px;
+  height: 16px;
+  padding-left: 2px;
+  font-size: 135%;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-pointEditName,
+.dinamicPanel-pointOkName {
+  float: left;
+  cursor: pointer;
+
+}
+
+.dinamicPanel-editBtns {
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+
+.dinamicPanel-pointOkName {
+  z-index: 50;
+}
+
+.dinamicPanel-pointEditName:hover,
+.dinamicPanel-pointOkName:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-pointInfo {
+  width: 200px;
+  font-size: 110%;
+}
+
+.dinamicPanel-pointTools {
+  float: right;
+  width: 65px;
+}
+
+/*Geo -----------------------------------------------*/
+/* Features ---------------------------------------- */
+#OpenLayers_Feature_Vector_2209{
+  position: absolute;
+  top: 250px;
+}
+.dinamicPanel-geoItem {
+  display: flex;
+ /* height: 33px; */
+  padding: 3px;
+  width: 270px;
+  border-radius: 5px;
+  border: 1px solid #959E9D;
+  background-color: #FFF;
+  margin: 0 0 5px 5px;
+}
+
+.dinamicPanel-geoItem:hover {
+  background-color: #c6eaff;
+}
+
+.dinamicPanel-geoItem:last-child {
+  display: flex;
+  border: 1px solid #959E9D !important;
+  background-color: #FFF;
+  border-radius: 5px;
+  margin: 0 0 0 5px;
+  width: 270px;
+}
+
+.dinamicPanel-geoIcon {
+  float: left;
+}
+
+.geo-rem-button {
+  float: right;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.dinamicPanel-geoBtn {
+  float: right;
+  width: 33px;
+  height: 33px !important;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.dinamicPanel-geoBtn:hover {
+  background-color: #EEE;
+}
+
+.dinamicPanel-geoText {
+  float: left;
+  width: 160px;
+  margin-left: 2px;
+}
+
+.dinamicPanel-geoName {
+  float: left;
+  width: 95%;
+  font-size: 135%;
+  font-weight: bold;
+}
+
+.dinamicPanel-geoInputName {
+  float: left;
+  width: 95%;
+  height: 40%;
+  padding-left: 2px;
+  font-size: 135%;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-geoInputDesc {
+  float: left;
+  width: 95%;
+  height: 40%;
+  padding-left: 2px;
+  font-size: 135%;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-geoEditName,
+.dinamicPanel-geoOkName {
+  float: left;
+  cursor: pointer;
+
+}
+
+.dinamicPanel-editBtns {
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+
+.dinamicPanel-geoOkName {
+  z-index: 50;
+}
+
+.dinamicPanel-geoEditName:hover,
+.dinamicPanel-geoOkName:hover {
+  background-color: #EEE;
+}
+
+/**/
+.dinamicPanel-geoEditDesc,
+.dinamicPanel-geoOkDesc {
+  float: left;
+  cursor: pointer;
+
+}
+
+.dinamicPanel-geoOkDesc {
+  z-index: 50;
+}
+
+.dinamicPanel-geoEditDesc:hover,
+.dinamicPanel-geoOkDesc:hover {
+  background-color: #EEE;
+}
+
+/**/
+.dinamicPanel-geoInfo {
+  width: 200px;
+  font-size: 110%;
+}
+
+.dinamicPanel-geoTools {
+  position: absolute;
+  left: 240px;
+}
+
+/*Route panel ---------------------------------------*/
+.route-controls {}
+
+.route-controls label {
+  float: left;
+  margin-top: 3px;
+}
+
+.route-controls div {
+  float: right;
+  font-size: 87%
+}
+
+.route-item {
+  height: 29px;
+  padding: 3px;
+  width: 363px;
+}
+
+.route-item-label {
+  font-size: 190%;
+  font-weight: bold;
+  margin-top: 2px;
+  width: 23px;
+  float: left;
+  height: 30px;
+}
+
+._route-item-label {}
+
+.route-item div {
+  /*float: left;
+    height: 27px;
+    width: 300px;
+    margin-left: 3px;*/
+}
+
+.route-separation {
+  float: left;
+  height: 18px;
+  margin-top: -6px;
+  width: 370px;
+}
+
+.route-line-separation {
+  border-top: 1px solid #DDDDDD;
+  float: left;
+  height: 1px;
+  margin-top: 11px;
+  width: 347px;
+}
+
+.route-add-button {
+  float: right;
+  cursor: pointer;
+}
+
+.route-rem-button {
+  float: left;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+/* Measure panel ------------------------------------*/
+.dinamicPanel-measurePanel .head {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-measurePanel .head input {
+  padding-left: 2px;
+  width: 247px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-measurePanel .rotate,
+.dinamicPanel-measurePanel .scale,
+.dinamicPanel-measurePanel .unit,
+.dinamicPanel-measurePanel .value {
+  float: right;
+  height: 15px;
+}
+
+.dinamicPanel-measurePanel .rotate *,
+.dinamicPanel-measurePanel .scale * {
+  float: left;
+}
+
+.dinamicPanel-measurePanel .controls {
+  background-color: #EEE;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50px;
+}
+
+.dinamicPanel-measurePanel .controls div {
+  margin-top: 4px;
+}
+
+.dinamicPanel-measurePanel .controls .unit {
+  width: auto;
+  height: 50%;
+  font-size: 85%;
+  margin: 5px auto 0 auto;
+}
+
+.dinamicPanel-measurePanel .controls .value {
+  font-size: 130%;
+  font-weight: bold;
+  width: auto;
+  height: 50%;
+  margin: 5px auto 0 auto;
+}
+
+.dinamicPanel-measurePanel .measureButtons {
+  float: right;
+  width: 50px;
+}
+
+.dinamicPanel-measurePanel .measureButtons div {
+  width: 80px;
+}
+
+.measureButtons .right {
+  float: right;
+  cursor: pointer;
+}
+
+.measure_slider {
+  width: 220px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.measureOption {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 10px auto;
+}
+
+.measureControls {
+  width: 100%;
+}
+
+.measureOption div {
+  font-size: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.measureOption button {
+  font-size: 90%;
+  width: 80px;
+}
+
+/* Buffer panel ------------------------------------*/
+.dinamicPanel-bufferPanel .head {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-bufferPanel .head input {
+  padding-left: 2px;
+  width: 247px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-bufferPanel .rotate,
+.dinamicPanel-bufferPanel .scale,
+.dinamicPanel-bufferPanel .unit,
+.dinamicPanel-bufferPanel .value {
+  float: left;
+  width: 250px;
+  height: 15px;
+}
+
+.dinamicPanel-bufferPanel .rotate *,
+.dinamicPanel-bufferPanel .scale * {
+  float: left;
+}
+
+.dinamicPanel-bufferPanel .controls {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-bufferPanel .controls div {
+  margin-top: 4px;
+}
+
+.dinamicPanel-bufferPanel .controls .unit {
+  font-size: 89%;
+  font-weight: bold;
+  margin-top: 9px !important;
+  width: 115px !important;
+}
+
+.dinamicPanel-bufferPanel .controls .value {
+  font-size: 130%;
+  font-weight: bold;
+  margin-top: 9px !important;
+  padding-top: 6px;
+  text-align: right;
+  width: 124px !important;
+}
+
+.dinamicPanel-bufferPanel .bufferButtons {
+  float: right;
+  width: 50px;
+}
+
+.dinamicPanel-bufferPanel .bufferButtons div {
+  width: 80px;
+}
+
+.bufferButtons .right {
+  float: right;
+  cursor: pointer;
+}
+
+.buffer_slider {
+  width: 220px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.bufferOption {
+  height: 24px;
+  width: 250px;
+  float: left;
+}
+
+.bufferOption div {
+  font-size: 80%;
+  float: left;
+}
+
+.bufferOption button {
+  font-size: 90%;
+  float: right;
+  width: 55px;
+}
+
+/*Categorias dentro de busqueda-------------- */
+.dinamicPanel-categoryItem {
+  cursor: pointer;
+  color: #2384C5;
+  font-size: 110%;
+  float: right;
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #EEE;
+  margin-top: 3px;
+}
+
+.dinamicPanel-categoryItem-left {
+  cursor: pointer;
+  color: #2384C5;
+  font-size: 110%;
+  float: right;
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #EEE;
+  margin-top: 3px;
+}
+
+.dinamicPanel-categoryItem-left span {
+  padding-left: 3px;
+  padding-right: 3px;
+  float: right;
+  background-color: #FFF;
+  border: 1px solid #EEE;
+
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+
+  -webkit-box-shadow: 0 0 1px 0 #D6D6D6;
+  box-shadow: 0 0 1px 0 #D6D6D6;
+}
+
+.dinamicPanel-categoryItem:first-child {
+  margin-top: 0px;
+}
+
+.dinamicPanel-categoryItem:hover {
+  background-color: #DDD;
+}
+
+.dinamicPanel-categoryItem-left:first-child {
+  margin-top: 0px;
+}
+
+.dinamicPanel-categoryItem-left:hover {
+  background-color: #DDD;
+}
+
+.dinamicPanel-categoryItem-container-left {
+  height: 118px;
+}
+
+.dinamicPanel-categoryItem-container {
+  float: right;
+  width: 165px;
+  height: 93px;
+}
+
+.dinamicPanel-categoryItem-title {
+  width: 100%;
+  height: 18px;
+  font-size: 110%;
+  float: left;
+}
+
+.dinamicPanel-categoryItem-list {
+  width: 100%;
+ /* height: 76px;*/
+  float: left;
+  overflow-y: auto;
+}
+
+/* Point panel ------------------------------------*/
+.dinamicPanel-pointPanel .head {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-pointPanel .head input {
+  padding-left: 2px;
+  width: 247px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-pointPanel .rotate,
+.dinamicPanel-pointPanel .scale,
+.dinamicPanel-pointPanel .unit,
+.dinamicPanel-pointPanel .value {
+  float: right;
+  height: 15px;
+}
+
+.dinamicPanel-pointPanel .rotate *,
+.dinamicPanel-pointPanel .scale * {
+  float: left;
+}
+
+.dinamicPanel-pointPanel .controls {
+  background-color: #EEE;
+  padding: 3px;
+  float: right;
+  width: 175px;
+  text-align: center;
+}
+
+.dinamicPanel-pointPanel .controls div {
+  margin-top: 4px;
+}
+
+.dinamicPanel-pointPanel .controls .unit {
+  float: right;
+  width: 100%;
+  height: 15px;
+  padding-bottom: 10px;
+  font-size: 85%;
+}
+
+.dinamicPanel-pointPanel .controls .unit button {
+  width: 120px;
+}
+
+.dinamicPanel-pointPanel .controls .value {
+  /*font-size: 130%;
+    font-weight: bold;
+    margin-top: 4px !important;
+    padding-top: 6px;
+    text-align: right;*/
+  width: 165px !important;
+  /*margin-right: 11px;*/
+}
+
+.dinamicPanel-pointPanel .pointButtons {
+  float: right;
+  width: 50px;
+}
+
+.dinamicPanel-pointPanel .pointButtons div {
+  width: 80px;
+}
+
+.pointButtons .right {
+  float: right;
+  cursor: pointer;
+}
+
+.point_slider {
+  width: 220px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.pointOption {
+  height: 24px;
+  width: 175px;
+  float: left;
+  margin-top: 11px;
+}
+
+.pointControls {
+  float: right;
+  width: 177px;
+  padding: 2px;
+}
+
+.pointBuffers {
+  width: 100%;
+}
+
+.pointBuffers button {
+  font-size: 90%;
+  width: 50%
+}
+
+.pointOption div {
+  font-size: 80%;
+  float: left;
+}
+
+.pointOption button {
+  font-size: 90%;
+  float: left;
+  width: 120px;
+}
+
+/* Geo panel ------------------------------------*/
+.dinamicPanel-geoPanel .head {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-geoPanel .head input {
+  padding-left: 2px;
+  width: 247px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-geoPanel .rotate,
+.dinamicPanel-geoPanel .scale,
+.dinamicPanel-geoPanel .unit,
+.dinamicPanel-geoPanel .value {
+  float: right;
+  height: 15px;
+}
+
+.dinamicPanel-geoPanel .rotate *,
+.dinamicPanel-geoPanel .scale * {
+  float: left;
+}
+
+.dinamicPanel-geoPanel .controls {
+  background-color: #959E9D;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+  padding: 3px;
+  text-align: center;
+  box-shadow: 1px 1px 5px 5px rgb(0, 0, 0, 0.1);
+}
+
+.dinamicPanel-geoPanel .controls div {
+  margin: 0;
+}
+
+.dinamicPanel-geoPanel .controls .unit {
+  width: 50%;
+  height: auto;
+  font-size: 85%;
+}
+
+.dinamicPanel-geoPanel .controls .unit button {
+  width: auto;
+}
+
+.dinamicPanel-geoPanel .controls .value {
+  font-size: 130%;
+  font-weight: bold;
+  margin-top: 4px !important;
+  padding-top: 6px;
+  text-align: right;
+  width: 165px !important;
+  margin-right: 11px;
+}
+
+.dinamicPanel-geoPanel .geoButtons {
+  float: right;
+  width: 50px;
+}
+
+.dinamicPanel-geoPanel .geoButtons div {
+  width: 80px;
+}
+
+.geoButtons .right {
+  float: right;
+  cursor: pointer;
+}
+
+.geo_slider {
+  width: 220px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.geoOption {
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  width: auto;
+  margin: 11px 0;
+}
+
+.geoControls {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 30px;
+  margin: 5px 0;
+}
+
+.geoBuffers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin: 5px auto;
+}
+
+.geoBuffers button {
+  font-size: 90%;
+  width: 75%
+}
+
+.geoBuffers .geoClear {
+  font-size: 90%;
+  width: auto
+}
+
+.geoOption div {
+  font-size: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.geoOption button {
+  font-size: 90%;
+  float: left;
+  width: 30%;
+}
+
+/*--Services------------------*/
+.dinamicPanel-servicePanel .head {
+  float: left;
+  width: 250px;
+}
+
+.dinamicPanel-servicePanel .head input {
+  padding-left: 2px;
+  width: 247px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.dinamicPanel-servicePanel .rotate,
+.dinamicPanel-geoPanel .scale,
+.dinamicPanel-geoPanel .unit,
+.dinamicPanel-geoPanel .value {
+  float: right;
+  height: 15px;
+}
+
+.dinamicPanel-servicePanel .rotate *,
+.dinamicPanel-geoPanel .scale * {
+  float: left;
+}
+
+.dinamicPanel-servicePanel .controls {
+  background-color: #EEE;
+  padding: 3px;
+  float: right;
+  width: 135px;
+  text-align: center;
+}
+
+.dinamicPanel-servicePanel .controls div {
+  margin-top: 4px;
+}
+
+.dinamicPanel-servicePanel .controls .unit {
+  float: right;
+  width: 100%;
+  height: 15px;
+  padding-bottom: 10px;
+  font-size: 85%;
+}
+
+.dinamicPanel-servicePanel .controls .unit button {
+  width: 120px;
+}
+
+.dinamicPanel-servicePanel .controls .value {
+  font-size: 130%;
+  font-weight: bold;
+  margin-top: 4px !important;
+  padding-top: 6px;
+  text-align: right;
+  width: 165px !important;
+  margin-right: 11px;
+}
+
+.dinamicPanel-servicePanel .geoButtons {
+  float: right;
+  width: 50px;
+}
+
+.dinamicPanel-servicePanel .geoButtons div {
+  width: 80px;
+}
+
+.seviceButtons .right {
+  float: right;
+  cursor: pointer;
+}
+
+.service_slider {
+  width: 220px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.serviceOption {
+  height: 24px;
+  width: 215px;
+  /*float: left;*/
+  margin-top: 11px;
+}
+
+.serviceControls {
+  float: right;
+  width: 140px;
+  padding: 2px;
+}
+
+.serviceBuffers {
+  width: 100%;
+}
+
+.serviceBuffers button {
+  font-size: 90%;
+  width: 75%
+}
+
+.serviceOption div {
+  font-size: 80%;
+  float: left;
+}
+
+.serviceOption button {
+  font-size: 90%;
+  float: left;
+  width: 150px;
+}
+
+.serviceOption input {
+  border: 1px solid #DDDDDD;
+  background: transparent;
+  color: #555;
+  height: 23px;
+  padding-left: 3px;
+  padding-right: 25px;
+  border-radius: 4px;
+}
+
+
+/*-Leyen-----------------*/
+.dinamicPanel-leyend-container {
+  width: 100%;
+  height: 355px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.dinamicPanel-legendWindow {
+  position: absolute;
+  right: 10px;
+  top: 115px;
+  cursor: pointer;
+  float: right;
+  margin-right: 27px;
+  margin-top: -23px;
+}
+
+.dinamicPanel-leyend-container img {
+  margin-top: 20px;
+  margin: 5px;
+  float: left;
+  clear: both;
+  border-bottom: solid 1px grey;
+  border-left: solid 1px;
+ /* margin-right: 151px;*/
+  margin-bottom: 15px;
+}
+
+/*Buffers-------------------------------*/
+.dinamicPanel-layerSelect {
+  float: left;
+  margin-left: 5px;
+  width: 243px;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+}
+
+.dinamicPanel-customDetail {
+  float: left;
+  width: 100%;
+  height: 225.5px !important;
+ /* overflow: auto;*/
+}
+
+.dinamicPanel-customDetail-container {
+  position: relative;
+  height: 220.5px !important;
+ /* width: 353px;*/
+}
+
+.dinamicPanel-customDetail-title {
+  width: 100%;
+  /*height: 15px;*/
+  float: left;
+  color: #000;
+  font-weight: bold;
+  font-size: 110%;
+  border-bottom: 1px solid #DDD;
+}
+
+.dinamicPanel-customDetail-header {
+  width: 100%;
+  height: auto;
+  float: left;
+  max-height: 90px;
+  overflow-y: auto;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.customDetail-header-item:nth-of-type(even) {
+  background-color: #f4f4f4;
+}
+
+.customDetail-header-item {
+  float: left;
+  width: 99%;
+  margin-left: 1%;
+  color: #000000;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.customDetail-header-item label {
+  float: left;
+  font-weight: bold;
+  width: 258px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.customDetail-header-item span {
+  float: right;
+}
+
+.dinamicPanel-detailList-item span {
+  float: right !important;
+}
+
+.dinamicPanel-detailList-container {
+  float: left;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dinamicPanel-crossType-container {
+ /*width: 340px;*/
+  height: 0px;
+  position: relative;
+  z-index: 1100;
+
+}
+
+.dinamicPanel-crosstype-option {
+  float: right;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.dinamicPanel-crosstype-option[active=true] {
+  background-color: #ADDFF9;
+}
+
+.dinamicPanel-detail-tools {
+  float: left;
+  width: 100%;
+  margin-top: -16px;
+}
+
+.dinamicPanel-detail-tools-container {
+  position: relative;
+  width: 150px;
+}
+
+.dinamicPanel-detail-tools span {
+  float: left;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+/*control de tablas recibidas en servicio de identificación */
+.service-container {
+  width: 100%;
+  padding: 5px;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.service-container-title {
+  width: 100%;
+  height: 34px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+
+  border: 1px solid #cacaca;
+  padding: 8px;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.service-container-content {
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.service-container[_open=false] .service-container-content {
+  height: 0px;
+}
+
+.crossBtn{
+  position: absolute;
+  left: 215px;
+  margin-top: 3px;
+}
+
+.iconIndicator{
+  margin: 5px;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+
+  /*
+  .dinamicPanel-contained-on{
+    position: absolute;
+    left: 200px;
+  }
+
+  .dinamicPanel-intersection-on{
+    position: absolute;
+    left: 220px;
+  }
+*/
+.dinamicPanel-detailList-container{
+  max-height: 60px;
+}
+
+}
