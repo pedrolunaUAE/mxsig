@@ -55,7 +55,7 @@ fi
 
 # Descargar proyecto de GitLab
 echo "Clonar proyecto de Gitlab"
-if [ ! -d "$current_dir/clientes/" ]; then
+if [ ! -d "$current_dir/clientes/signay" ]; then
     git clone "https://github.com/pedrolunaUAE/mxsig-clientes" "$current_dir/clientes/"
 else
     echo "El proyecto de GitLab ya ha sido clonado previamente."
